@@ -16,3 +16,18 @@ img {
   display: block;
   max-width: 100%;
 }
+
+.value,
+.label {
+  display: block;
+  text-align: center;
+}
+
+.timer {
+  display: flex;
+  gap: 50;
+  padding: 20;
+
+  font-size: 28;
+}
+
