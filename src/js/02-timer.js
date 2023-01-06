@@ -33,7 +33,7 @@ refs.buttonEl.addEventListener('click', onButtonElClick);
 
 function onButtonElClick({ target }) {
   const intervalID = setInterval(() => {
-    leftTime = (startTime.getTime() || 0) - Date.now();
+    const leftTime = (startTime.getTime() || 0) - Date.now();
     if (leftTime >= 0) {
       renderMarkup(convertMs(leftTime));
     } else {
