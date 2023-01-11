@@ -9,7 +9,7 @@ function onFormElSubmit(event) {
   const { amount, delay, step } = event.target.elements;
   let delayCounter = +delay.value;
   for (let i = 0; i < +amount.value; i += 1) {
-    delayCounter += +step.value * (i > 0 ? 1 : 0);
+    // delayCounter += +step.value * (i > 0 ? 1 : 0);
     createPromise(i, delayCounter)
       .then(({ position, delay }) => {
         Notify.success(`✅ Fulfilled promise ${position + 1} in ${delay}ms`, {
@@ -23,6 +23,7 @@ function onFormElSubmit(event) {
           fontSize: '20px',
         });
       });
+    delayCounter += +step.value;
   }
 }
 
